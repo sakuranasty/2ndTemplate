@@ -1,0 +1,59 @@
+.numbers{
+	margin-top: 56px;
+	background: #dedfd7 url('../img/images/screen7/handsbig.png') top center no-repeat;
+	.items{
+		.flexwrap(@offset_one_side);
+		padding-top: 200px;
+		padding-bottom:180px;
+	}
+	.item{
+		.size(@n, 3, @offset);
+		text-align: center;
+		&__img{
+			width: 119px;
+			height: 119px;
+			background:@middle-green;
+			border-radius: 70px;
+			margin: 10px auto 0;
+			img{
+				vertical-align: middle;	
+				margin-top: 36px;
+			}
+		}
+		&__number{
+			font-size: 45px;
+			font-weight: 300;
+			margin: 25px 0 15px;
+			color: @middle-green;
+		}
+		&__descr{
+			font-size: 20px;
+		}
+	}
+}
+@media screen and (max-width:768px){
+	.numbers{
+	.items{
+		padding: 40px 0;
+	}
+	.item{
+		.size(@n, 6, @offset);
+		text-align: center;
+		margin-bottom: 20px;
+		}
+	}
+}
+@media screen and (max-width:462px){
+	.numbers{
+	.items{
+		padding: 40px 0;
+		align-items:center;
+		flex-direction: column;
+	}
+	.item{
+		.size(@n, 10, @offset);
+		text-align: center;
+		margin-bottom: 20px;
+		}
+	}
+}

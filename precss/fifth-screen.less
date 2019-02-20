@@ -1,0 +1,44 @@
+.support{
+	display: flex;
+	margin:0 auto;
+	margin-top: 50px;
+	max-width: 2048px;
+	.block{
+		padding: 0 10px;
+		width: calc(2048px / @n * 4);
+		background:@middle-green;
+		&:first-child{
+			background: @light-green;
+		}
+		&:last-child{
+			background: @dark-green;
+		}
+		.item{
+			margin:90px auto;
+			max-width: 466px;
+			text-align: center;
+			color: #ffffff;
+			font-size: 14px;
+			.cloud {
+				padding-top: 10px;
+			}
+			&__title{
+				margin: 20px 0 18px;
+				font-size: 25px;
+				font-weight: 300;
+
+			}
+			&__descr{
+				line-height: 23px;
+			}
+		}
+	}
+}
+@media screen and (max-width:768px){
+	.support{
+		flex-wrap: wrap;
+	.block{
+		width: calc(100% / @n * 12);
+		}
+	}
+}
